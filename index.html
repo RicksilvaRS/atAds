@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Média Aritmética</title>
+ </head>
+ <body>
+   Primeira nota: <input type="number" id="nota1" /> <br />
+   Segunda nota: <input type="number" id="nota2" /> <br />
+   <button onclick="calcularMedia()">Calcular Média</button>
+   <p id="resultado"></p>
+
+   <script>
+     function calcularMedia() {
+       var nota1 = parseFloat(document.getElementById("nota1").value);
+       var nota2 = parseFloat(document.getElementById("nota2").value);
+       var media = (nota1 + nota2) / 2;
+
+       if (media >= 7) {
+         document.getElementById("resultado").innerText = "Aprovado";
+       } else {
+         document.getElementById("resultado").innerText = "Reprovado";
+       }
+     }
+   </script>
+ </body>
+</html>
